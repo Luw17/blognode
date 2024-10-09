@@ -19,6 +19,18 @@ app.use(express.static('public'));
 app.get('/',function(req,res){
     res.render("home")
 })
+app.get('/add',function(req,res){
+    res.render("add")
+})
+app.get('/list',function(req,res){
+    res.render("list")
+})
+app.get('/delete/:id',function(req,res){
+    let id = req.params.id
+})
+app.get('/edit/:id',function(req,res){
+    let id = req.params.id
+})
 
 app.listen(8080,function(){
     console.log("o Servidor esta rodando na url http://localhost:8080")
